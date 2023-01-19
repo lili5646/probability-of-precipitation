@@ -1,0 +1,13 @@
+function calculatePrecipitationProbability(temperature, humidity) {
+    let probability;
+    if (temperature <= 0) {
+        probability = humidity * 0.1;
+    } else if (temperature > 0 && temperature <= 10) {
+        probability = humidity * 0.2;
+    } else if (temperature > 10 && temperature <= 20) {
+        probability = humidity * 0.3;
+    } else if (temperature > 20) {
+        probability = humidity * 0.4;
+    }
+    return probability;
+}
